@@ -1,3 +1,14 @@
+# Ressources
+
+### Install Zookeeper
+[Zookeeper configuration on Linux](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-an-apache-zookeeper-cluster-on-ubuntu-18-04)
+
+### Install Kafka
+[Kafka configuration on Linux](https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-ubuntu-18-04)
+
+### Original Repo
+[Git repo original](https://github.com/firebase007/kafka_producer_consumer_tutorial)
+
 # Single Node
 
 ### Start Zookeeper

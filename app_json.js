@@ -12,7 +12,7 @@ const jsonData = [{
 {
 "name":"Franz Kafka",
   "age": 26,
-  "occupation": "Technical Author & Reviewer",
+  "occupation": "Technical Author & Reviewer"
 }];
 
 module.exports = jsonData;

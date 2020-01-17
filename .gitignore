@@ -1,4 +1,4 @@
 node_modules/
 .env
 original/
-app_json.js
+/app_json.js

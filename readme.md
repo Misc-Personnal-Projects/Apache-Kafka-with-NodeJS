@@ -75,3 +75,26 @@ deleteall /admin/delete_topics/<topic_name>
 ```
 sudo bin/kafka-server-stop.sh
 ```
+
+# With NodeJS
+In the app folder
+
+### Topics creation
+```
+node ./createTopics.js
+```
+Change the env variable with the correct topics names
+
+### Start a producer
+Update as you wish data stored in app_json.js
+```
+node ./producer.js
+```
+
+### Start consumers
+In several new cli
+```
+node ./consumer.js
+```
+
+

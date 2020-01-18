@@ -2,7 +2,7 @@
           KAFKA INIT
 ===============================================================================================*/
 const kafka = require('kafka-node');
-const config = require('./env/config');
+const config = require('./config');
 
 try {
   // Define Kafka Consumer Class

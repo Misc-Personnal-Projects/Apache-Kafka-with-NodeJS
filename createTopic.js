@@ -2,7 +2,7 @@
           KAFKA INIT
 ===============================================================================================*/
 const kafka = require('kafka-node');
-const config  = require('./config');
+const config  = require('./env/config');
 // Create a new instance of kafka client according to env variables
 const client = new kafka.KafkaClient({kafkaHost: config.KafkaHost});
 // Create a new topic to be created within Kafka

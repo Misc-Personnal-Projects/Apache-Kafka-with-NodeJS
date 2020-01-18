@@ -3,7 +3,7 @@
 ===============================================================================================*/
 
 // Kafka related imports
-const config  = require('./config');
+const config  = require('./env/config');
 const kafka = require('kafka-node');
 
 // Define Kafka Producer Class

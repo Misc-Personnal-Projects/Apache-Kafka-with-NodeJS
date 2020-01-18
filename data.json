@@ -1,0 +1,17 @@
+{ 
+  "1": {
+    "name":"John Doe",
+    "age": 27,
+    "occupation": "Software Engineer"
+  },
+  "2": {
+    "name":"Paul Dummies",
+    "age": 28,
+    "occupation": "Software Tester"
+  },
+  "3": {
+    "name":"Franz Kafka",
+    "age": 26,
+    "occupation": "Technical Author & Reviewer"
+  }
+}

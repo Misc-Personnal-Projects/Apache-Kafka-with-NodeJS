@@ -1,10 +1,15 @@
+/*===============================================================================================
+          KAFKA INIT
+===============================================================================================*/
 const kafka = require('kafka-node');
 const config = require('./config');
 
 try {
+  // Define Kafka Consumer Class
   const Consumer = kafka.Consumer;
+  // Create a new instance of kafka client according to env variables
   const client = new kafka.KafkaClient({idleConnection: 24 * 60 * 60 * 1000,  kafkaHost: config.KafkaHost});
- 
+  // Create a new instance of producer within the kafka client and with custom options
   let consumer = new Consumer(
      client,
      [{ topic: config.KafkaTopic, partition: 0, offset: 0 }],
@@ -26,10 +31,15 @@ try {
       keyEncoding: 'utf8'
      }
    );
+
+   /*===============================================================================================
+          RETRIEVE MESSAGES FROM KAFKA TOPIC
+  ===============================================================================================*/
+
    consumer.on('message', async function(message) {
      console.log(
        'kafka ',
-       JSON.parse(message.value)
+       JSON.parse(message.value) //Format to JSON
      );
    })
    consumer.on('error', function(error) {

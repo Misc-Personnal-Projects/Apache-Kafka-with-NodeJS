@@ -11,7 +11,16 @@ const Producer = kafka.Producer;
 // Create a new instance of kafka client according to env variables
 const client = new kafka.KafkaClient(config.KafkaHost);
 // Create a new instance of producer within the kafka client
-const producer = new Producer(client);
+const producer = new Producer(
+  client, 
+  {
+    // Configuration for when to consider a message as acknowledged, default 1
+    requireAcks: 1,
+    // The amount of time in milliseconds to wait for all acks before considered, default 100ms
+    ackTimeoutMs: 100,
+    // Partitioner type (default = 0, random = 1, cyclic = 2, keyed = 3, custom = 4), default 0
+    partitionerType: 2
+  });
 
 
 /*===============================================================================================

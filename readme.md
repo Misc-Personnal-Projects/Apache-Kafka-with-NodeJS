@@ -61,6 +61,12 @@ bin/kafka-topics.sh --list --zookeeper localhost:2181
 bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic <topic_name>
 ```
 
+> Leader : randomly selected node for a specific partitions abnd is responsible for all RW dfor this partitions
+> Replicas : list of nodes that hold the log for a specified position
+> ISR (InSync Replicas) : subset of in-sync replicas list taht is currently alive and in sync with the leader
+> Partition Count : Number of partition exisiting for a topic
+> Replication factor : the number of replicas that exist for this topic
+
 ### Delete a topics
 ```
 bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic <topic_name>
